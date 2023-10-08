@@ -103,11 +103,21 @@ const Login = () => {
       </View>
 
       {/* Forget password link */}
-      <TouchableOpacity
+      {/* <TouchableOpacity
         style={{ alignSelf: 'flex-end', marginBottom: 20 }}
         onPress={() => navigation.navigate('ForgotPassword')}>
         <Text style={styles.forgetPassword}>Forget Password ?</Text>
-      </TouchableOpacity>
+      </TouchableOpacity> */}
+
+      {/* Forget password link */}
+        <View style={styles.forgetPasswordContainer}>
+        <TouchableOpacity
+            onPress={() => navigation.navigate('ForgotPassword')}>
+            <Text style={[styles.forgetPassword, { marginTop: -40 },{left: '68%'}]}>
+            Forget Password ?
+            </Text>
+        </TouchableOpacity>
+        </View>
 
       {/* Login button */}
       <TouchableOpacity
@@ -117,7 +127,7 @@ const Login = () => {
       </TouchableOpacity>
 
       <TouchableOpacity
-        style={styles.buttonStyle}
+        style={styles.buttonStyle1}
         onPress={() => navigation.navigate('Home')}>
         <Text style={styles.buttonText}>Login</Text>
       </TouchableOpacity>
@@ -165,6 +175,7 @@ const styles = StyleSheet.create({
     paddingLeft: '5%',
     paddingRight: '5%',
     marginBottom: 20,
+    bottom: '10%',
   },
   inputField: {
     flex: 1,
@@ -178,16 +189,26 @@ const styles = StyleSheet.create({
     color: '#fff',
     fontFamily: 'Poppins-SemiBold',
     fontSize: 30,
+    bottom: '15%',
   },
   textStyle2: {
     color: '#fff',
     fontFamily: 'Poppins-SemiBold',
     fontSize: 16,
     marginTop: -17,
-  },
+    bottom: '12%',
+ },
   buttonStyle: {
     height: 65,
     backgroundColor: '#7D5DF6',
+    borderRadius: 12,
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginBottom: 20,
+  },
+  buttonStyle1: {
+    height: 65,
+    backgroundColor: '#4B5563',
     borderRadius: 12,
     alignItems: 'center',
     justifyContent: 'center',
@@ -198,21 +219,26 @@ const styles = StyleSheet.create({
     fontSize: 16,
     color: '#F3F5F6',
   },
+  
   forgetPassword: {
     fontFamily: 'Poppins-Medium',
     fontSize: 14,
     color: '#7D5DF6',
+    bottom: '5%',
   },
   textLabel1: {
     color: '#ACADB9',
     fontFamily: 'Poppins-Medium',
     fontSize: 16,
+    bottom: '5%',
   },
   textLabel: {
     color: '#ACADB9',
     fontFamily: 'Poppins-Medium',
     fontSize: 16,
+    bottom: '5%',
   },
 });
+
 
 export default Login;
