@@ -34,7 +34,7 @@ const Login = () => {
   const emailIcon = require('../../assets/sms.png');
   const lockIcon = require('../../assets/lock.png');
   const eyeOffIcon = require('../../assets/eye.png');
-  const google = require('../../assets/logo.png');
+  const google = require('../../assets/google.png');
   const apple = require('../../assets/logo.png');
 
   // State variables to store user input
@@ -127,10 +127,14 @@ const Login = () => {
       </TouchableOpacity>
 
       <TouchableOpacity
-        style={styles.buttonStyle1}
-        onPress={() => navigation.navigate('Home')}>
-        <Text style={styles.buttonText}>Login</Text>
-      </TouchableOpacity>
+         style={styles.buttonStyle1}
+         onPress={() => navigation.navigate('Home')}
+      >
+        <View style={{ flexDirection: 'row', alignItems: 'center' }}>
+            <Image source={google} />
+            <Text style={styles.buttonText1}>Login with google</Text>
+        </View>
+        </TouchableOpacity>
 
 
       <View style={{ alignSelf: 'center', flexDirection: 'row', gap: 5 }}>
@@ -218,6 +222,12 @@ const styles = StyleSheet.create({
     fontFamily: 'Poppins-Medium',
     fontSize: 16,
     color: '#F3F5F6',
+  },
+  buttonText1: {
+    fontFamily: 'Poppins-Medium',
+    fontSize: 16,
+    color: '#F3F5F6',
+    right: -10,
   },
   
   forgetPassword: {
