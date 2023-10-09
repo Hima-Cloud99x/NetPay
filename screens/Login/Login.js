@@ -239,13 +239,13 @@ const styles = StyleSheet.create({
   textLabel1: {
     color: '#ACADB9',
     fontFamily: 'Poppins-Medium',
-    fontSize: 16,
+    fontSize: 14,
     bottom: '5%',
   },
   textLabel: {
     color: '#ACADB9',
     fontFamily: 'Poppins-Medium',
-    fontSize: 16,
+    fontSize: 14,
     bottom: '5%',
   },
 });

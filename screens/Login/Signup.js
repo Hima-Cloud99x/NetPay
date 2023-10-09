@@ -75,7 +75,7 @@ const Signup = () => {
       {/* Back button for navigation */}
       <TouchableOpacity
         style={styles.backIcon}
-        onPress={() => navigation.navigate('Welcome')}>
+        onPress={() => navigation.navigate('Login')}>
         <Image source={back} />
       </TouchableOpacity>
 
@@ -84,8 +84,8 @@ const Signup = () => {
       </View>
 
       {/* Title */}
-      <Text style={styles.textStyle1}>Welcome back!</Text>
-      <Text style={styles.textStyle2}>Sign in to your account</Text>
+      <Text style={styles.textStyle1}>Sign up</Text>
+      <Text style={styles.textStyle2}>Create account and enjoy all services </Text>
 
       {/* Text label for email field */}
       <Text style={styles.textLabel1}>Full Name</Text>
@@ -142,8 +142,12 @@ const Signup = () => {
             style={styles.checkboxIcon}
           />
         </TouchableOpacity>
-        <Text style={styles.checkboxLabel}>Remember Me</Text>
-      </View>
+        <Text style={styles.checkboxLabel}>
+    I agree to the company {' '} and {' '} 
+    <Text style={{ color: '#7D5DF6' }}>Terms of Services </Text>
+    <Text style={{ color: '#7D5DF6' }}>Privacy Policy</Text>
+  </Text>
+  </View>
       
 {/* 
 
@@ -178,10 +182,10 @@ const Signup = () => {
 
       <View style={{ alignSelf: 'center', flexDirection: 'row', gap: 5 }}>
         <Text style={[styles.buttonText, { color: '#ACADB9' }]}>
-          Create New Account?
+          Have an account?
         </Text>
         <TouchableOpacity onPress={() => navigation.navigate('Register')}>
-          <Text style={[styles.buttonText, { color: '#7D5DF6' }]}>Sign Up</Text>
+          <Text style={[styles.buttonText, { color: '#7D5DF6' }]}>Login</Text>
         </TouchableOpacity>
       </View>
     </ScrollView>
@@ -218,7 +222,7 @@ const styles = StyleSheet.create({
     paddingLeft: '5%',
     paddingRight: '5%',
     marginBottom: 20,
-    bottom: '10%',
+    bottom: '4%',
   },
   inputField: {
     flex: 1,
@@ -232,14 +236,14 @@ const styles = StyleSheet.create({
     color: '#fff',
     fontFamily: 'Poppins-SemiBold',
     fontSize: 30,
-    bottom: '12%',
+    bottom: '10%',
   },
   textStyle2: {
     color: '#fff',
     fontFamily: 'Poppins-SemiBold',
     fontSize: 16,
     marginTop: -17,
-    bottom: '9%',
+    bottom: '7%',
  },
   buttonStyle: {
     height: 65,
@@ -278,29 +282,34 @@ const styles = StyleSheet.create({
   textLabel1: {
     color: '#ACADB9',
     fontFamily: 'Poppins-Medium',
-    fontSize: 16,
-    bottom: '5%',
+    fontSize: 14,
+    bottom: '2%',
   },
   textLabel: {
     color: '#ACADB9',
     fontFamily: 'Poppins-Medium',
-    fontSize: 16,
-    bottom: '5%',
+    fontSize: 14,
+    bottom: '2%',
   },
   checkboxContainer: {
     flexDirection: 'row',
     alignItems: 'center',
     marginTop: 10,
+    width: 290,
   },
   checkboxIcon: {
     width: 24,
     height: 24,
+    left: 40,
+    bottom: 38,
   },
   checkboxLabel: {
     marginLeft: 8,
     color: '#C2C3CB',
     fontFamily: 'Poppins-Medium',
-    fontSize: 14,
+    fontSize: 12,
+    bottom: 34,
+    left: 50,
   },
 });
 
