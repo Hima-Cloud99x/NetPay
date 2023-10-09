@@ -26,7 +26,7 @@ import {
 } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 
-const Login = () => {
+const Signup = () => {
   const navigation = useNavigation();
 
   // Importing necessary images/icons
@@ -70,6 +70,20 @@ const Login = () => {
       <Text style={styles.textStyle2}>Sign in to your account</Text>
 
       {/* Text label for email field */}
+      <Text style={styles.textLabel1}>Full Name</Text>
+      <View style={styles.inputFieldContainer}>
+        <Image source={emailIcon} />
+        {/* Email input field */}
+        <TextInput
+          style={styles.inputField}
+          value={email}
+          onChangeText={handleEmailChange}
+          placeholder="Full Name"
+          placeholderTextColor="#C2C3CB"
+        />
+      </View>
+
+      {/* Text label for email field */}
       <Text style={styles.textLabel1}>Email</Text>
       <View style={styles.inputFieldContainer}>
         <Image source={emailIcon} />
@@ -78,7 +92,7 @@ const Login = () => {
           style={styles.inputField}
           value={email}
           onChangeText={handleEmailChange}
-          placeholder="Enter Your Email"
+          placeholder="Email Address"
           placeholderTextColor="#C2C3CB"
         />
       </View>
@@ -102,12 +116,6 @@ const Login = () => {
         </TouchableOpacity>
       </View>
 
-      {/* Forget password link */}
-      {/* <TouchableOpacity
-        style={{ alignSelf: 'flex-end', marginBottom: 20 }}
-        onPress={() => navigation.navigate('ForgotPassword')}>
-        <Text style={styles.forgetPassword}>Forget Password ?</Text>
-      </TouchableOpacity> */}
 
       {/* Forget password link */}
         <View style={styles.forgetPasswordContainer}>
@@ -119,11 +127,12 @@ const Login = () => {
         </TouchableOpacity>
         </View>
 
+
       {/* Login button */}
       <TouchableOpacity
         style={styles.buttonStyle}
         onPress={() => navigation.navigate('Home')}>
-        <Text style={styles.buttonText}>Login</Text>
+        <Text style={styles.buttonText}>Sign up</Text>
       </TouchableOpacity>
 
       <TouchableOpacity
@@ -132,7 +141,7 @@ const Login = () => {
       >
         <View style={{ flexDirection: 'row', alignItems: 'center' }}>
             <Image source={google} />
-            <Text style={styles.buttonText1}>Login with google</Text>
+            <Text style={styles.buttonText1}>Sign up with google</Text>
         </View>
         </TouchableOpacity>
 
@@ -141,7 +150,7 @@ const Login = () => {
         <Text style={[styles.buttonText, { color: '#ACADB9' }]}>
           Create New Account?
         </Text>
-        <TouchableOpacity onPress={() => navigation.navigate('Signup')}>
+        <TouchableOpacity onPress={() => navigation.navigate('Register')}>
           <Text style={[styles.buttonText, { color: '#7D5DF6' }]}>Sign Up</Text>
         </TouchableOpacity>
       </View>
@@ -251,4 +260,4 @@ const styles = StyleSheet.create({
 });
 
 
-export default Login;
+export default Signup;
