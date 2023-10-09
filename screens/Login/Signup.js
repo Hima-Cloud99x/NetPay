@@ -1,4 +1,6 @@
 /* eslint-disable prettier/prettier */
+/* eslint-disable no-undef */
+/* eslint-disable prettier/prettier */
 /* eslint-disable react-native/no-inline-styles */
 /* eslint-disable prettier/prettier */
 /* eslint-disable prettier/prettier */
@@ -14,7 +16,7 @@
 // /* eslint-disable react-native/no-inline-styles */
 // /* eslint-disable no-trailing-spaces */
 // /* eslint-disable prettier/prettier */
-import React from 'react';
+import React, { useState } from 'react';
 import {
   View,
   StyleSheet,
@@ -40,6 +42,7 @@ const Signup = () => {
   // State variables to store user input
   const [email, setEmail] = React.useState('');
   const [password, setPassword] = React.useState('');
+  const [name, setName] = React.useState('');
   const [eye, setEye] = React.useState(false);
 
   // Event handlers for input field changes
@@ -51,6 +54,21 @@ const Signup = () => {
   const handlePasswordChange = password => {
     setPassword(password);
   };
+
+  const handleNameChange = name => {
+    setName(name);
+  };
+
+
+
+  const [isChecked, setIsChecked] = useState(false);
+
+  
+
+  const toggleCheckbox = () => {
+    setIsChecked(!isChecked);
+  };
+
 
   return (
     <ScrollView contentContainerStyle={styles.window}>
@@ -76,8 +94,8 @@ const Signup = () => {
         {/* Email input field */}
         <TextInput
           style={styles.inputField}
-          value={email}
-          onChangeText={handleEmailChange}
+          value={name}
+          onChangeText={handleNameChange}
           placeholder="Full Name"
           placeholderTextColor="#C2C3CB"
         />
@@ -115,9 +133,21 @@ const Signup = () => {
           <Image source={eyeOffIcon} />
         </TouchableOpacity>
       </View>
+      
+       {/* Checkbox */}
+       <View style={styles.checkboxContainer}>
+        <TouchableOpacity onPress={toggleCheckbox}>
+          <Image
+            source={isChecked ? require('../../assets/checked.png') : require('../../assets/Checkbox.png')}
+            style={styles.checkboxIcon}
+          />
+        </TouchableOpacity>
+        <Text style={styles.checkboxLabel}>Remember Me</Text>
+      </View>
+      
+{/* 
 
-
-      {/* Forget password link */}
+      Forget password link
         <View style={styles.forgetPasswordContainer}>
         <TouchableOpacity
             onPress={() => navigation.navigate('ForgotPassword')}>
@@ -125,7 +155,7 @@ const Signup = () => {
             Forget Password ?
             </Text>
         </TouchableOpacity>
-        </View>
+        </View> */}
 
 
       {/* Login button */}
@@ -202,14 +232,14 @@ const styles = StyleSheet.create({
     color: '#fff',
     fontFamily: 'Poppins-SemiBold',
     fontSize: 30,
-    bottom: '15%',
+    bottom: '12%',
   },
   textStyle2: {
     color: '#fff',
     fontFamily: 'Poppins-SemiBold',
     fontSize: 16,
     marginTop: -17,
-    bottom: '12%',
+    bottom: '9%',
  },
   buttonStyle: {
     height: 65,
@@ -256,6 +286,21 @@ const styles = StyleSheet.create({
     fontFamily: 'Poppins-Medium',
     fontSize: 16,
     bottom: '5%',
+  },
+  checkboxContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginTop: 10,
+  },
+  checkboxIcon: {
+    width: 24,
+    height: 24,
+  },
+  checkboxLabel: {
+    marginLeft: 8,
+    color: '#C2C3CB',
+    fontFamily: 'Poppins-Medium',
+    fontSize: 14,
   },
 });
 

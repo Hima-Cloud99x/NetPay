@@ -54,7 +54,7 @@ const details = [
     id: 3,
     title: 'Send money with no problem',
     description: 'Send money to your friends and families with no worries',
-    image: require('../../assets/man.png'),
+    image: require('../../assets/mann.png'),
     imageAlignment: 'center',
   },
   {
