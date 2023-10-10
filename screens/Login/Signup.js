@@ -184,7 +184,7 @@ const Signup = () => {
         <Text style={[styles.buttonText, { color: '#ACADB9' }]}>
           Have an account?
         </Text>
-        <TouchableOpacity onPress={() => navigation.navigate('Register')}>
+        <TouchableOpacity onPress={() => navigation.navigate('Login')}>
           <Text style={[styles.buttonText, { color: '#7D5DF6' }]}>Login</Text>
         </TouchableOpacity>
       </View>
@@ -204,8 +204,8 @@ const styles = StyleSheet.create({
     width: 45,
     height: 45,
     position: 'absolute',
-    top: 20,
-    left: 20,
+    top: 30,
+    left: 16,
   },
   imageContainer: {
     flexDirection: 'row',
@@ -235,15 +235,15 @@ const styles = StyleSheet.create({
   textStyle1: {
     color: '#fff',
     fontFamily: 'Poppins-SemiBold',
-    fontSize: 30,
-    bottom: '10%',
+    fontSize: 28,
+    bottom: '8%',
   },
   textStyle2: {
     color: '#fff',
     fontFamily: 'Poppins-SemiBold',
     fontSize: 16,
     marginTop: -17,
-    bottom: '7%',
+    bottom: '5%',
  },
   buttonStyle: {
     height: 65,

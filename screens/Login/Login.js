@@ -162,8 +162,8 @@ const styles = StyleSheet.create({
     width: 45,
     height: 45,
     position: 'absolute',
-    top: 20,
-    left: 20,
+    top: 30,
+    left: 16,
   },
   imageContainer: {
     flexDirection: 'row',

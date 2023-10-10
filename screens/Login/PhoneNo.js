@@ -205,9 +205,9 @@ const PhoneNo = () => {
 
       <View style={styles.imageContainer}></View>
 
-      <Text style={styles.textStyle1}>Welcome back!</Text>
-      <Text style={styles.textStyle2}>Sign in to your account</Text>
-
+      <Text style={styles.textStyle1}>Set Up 2-Step Verification</Text>
+      <Text style={styles.textStyle2}>Enter your phone number, we will send an </Text>
+        <Text style={styles.textStyle3}>authentication code</Text>
       <Text style={styles.textLabel}>Mobile Number</Text>
       <View style={styles.inputFieldContainer}>
         <Image source={phoneIcon} />
@@ -224,7 +224,7 @@ const PhoneNo = () => {
       <TouchableOpacity
         style={styles.buttonStyle}
         onPress={() => navigation.navigate('Home')}>
-        <Text style={styles.buttonText}>Login</Text>
+        <Text style={styles.buttonText}>Continue</Text>
       </TouchableOpacity>
     </ScrollView>
   );
@@ -242,8 +242,8 @@ const styles = StyleSheet.create({
     width: 45,
     height: 45,
     position: 'absolute',
-    top: 20,
-    left: 20,
+    top: 40,
+    left: 16,
   },
   imageContainer: {
     flexDirection: 'row',
@@ -257,10 +257,11 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'space-between',
     flexDirection: 'row',
-    paddingLeft: '5%',
-    paddingRight: '5%',
+    paddingLeft: '7%',
+    paddingRight: '7%',
     marginBottom: 20,
-    bottom: '10%',
+    bottom: '42%',
+
   },
   inputField: {
     flex: 1,
@@ -274,14 +275,21 @@ const styles = StyleSheet.create({
     color: '#fff',
     fontFamily: 'Poppins-SemiBold',
     fontSize: 30,
-    bottom: '15%',
+    bottom: '30%',
   },
   textStyle2: {
     color: '#fff',
     fontFamily: 'Poppins-SemiBold',
-    fontSize: 16,
+    fontSize: 14,
     marginTop: -17,
-    bottom: '12%',
+    bottom: '27%',
+  },
+  textStyle3: {
+    color: '#fff',
+    fontFamily: 'Poppins-SemiBold',
+    fontSize: 14,
+    marginTop: -17,
+    bottom: '25%',
   },
   buttonStyle: {
     height: 65,
@@ -290,6 +298,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     marginBottom: 20,
+    bottom: '13%',
   },
   buttonText: {
     fontFamily: 'Poppins-Medium',
@@ -300,7 +309,7 @@ const styles = StyleSheet.create({
     color: '#ACADB9',
     fontFamily: 'Poppins-Medium',
     fontSize: 14,
-    bottom: '5%',
+    bottom: '20%',
   },
 });
 
