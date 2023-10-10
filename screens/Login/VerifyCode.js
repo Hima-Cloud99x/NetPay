@@ -48,8 +48,9 @@ const VerifyEmail = () => {
         </View>
         <View style={styles.inputContainer}>
           <Text style={styles.textStyle1}>Verify Email</Text>
-          <Text style={styles.textStyle2}>We Have Sent Code To Your Email</Text>
-          <Text style={styles.textStyle3}>Joseph---Mail.Com</Text>
+          <Text style={styles.textStyle2}>Please enter the code we just sent to email</Text>
+          <Text style={styles.textStyle4}>timsmxxx@gmail.com</Text>
+          <Text style={styles.textStyle3}> Resend code in 00:48</Text>
           <View>
             <View style={styles.inputFieldContainer}>
               <TextInput
@@ -93,12 +94,12 @@ const VerifyEmail = () => {
               onPress={() => navigation.navigate('ResetPassword')}>
               <Text style={styles.buttonText}>Verify</Text>
             </TouchableOpacity>
-            <TouchableOpacity
+            {/* <TouchableOpacity
               style={[styles.buttonStyle, {backgroundColor: '#23262F'}]}>
               <Text style={[styles.buttonText, {color: '#C2C3CB'}]}>
                 Send Again
               </Text>
-            </TouchableOpacity>
+            </TouchableOpacity> */}
           </View>
         </View>
       </ScrollView>
@@ -115,6 +116,7 @@ const styles = StyleSheet.create({
     width: 45,
     height: 45,
     marginTop: '7%',
+    left: 5,
   },
   imageContainer: {
     flexDirection: 'row',
@@ -132,6 +134,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     gap: 18,
     marginBottom: 45,
+    bottom:'22%',
   },
   filledInput: {
     width: 60,
@@ -147,7 +150,7 @@ const styles = StyleSheet.create({
   inputField: {
     width: 60,
     height: 60,
-    borderWidth: 1.5,
+    // borderWidth: 0.5,
     borderColor: '#C2C3CB',
     borderRadius: 13,
     fontFamily: 'Poppins-Light',
@@ -156,29 +159,42 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     textAlignVertical: 'center',
     includeFontPadding: false,
+    backgroundColor:'#23262F',
   },
   textStyle1: {
     color: '#fff',
     fontFamily: 'Poppins-SemiBold',
     fontSize: 22,
     marginTop: 30,
+    right: '35%',
   },
   textStyle2: {
     color: '#ACADB9',
     fontFamily: 'Poppins-Regular',
     fontSize: 14,
     marginBottom: 40,
+    top: '0.5%',
+    right: '15%',
+  },
+  textStyle4: {
+    color: '#ACADB9',
+    fontFamily: 'Poppins-Regular',
+    fontSize: 14,
+    marginBottom: 40,
+    bottom: '8%',
+    right: '32%',
   },
   textStyle3: {
     color: '#ACADB9',
     fontFamily: 'Poppins-SemiBold',
     fontSize: 15,
     marginBottom: 30,
+    top: '10%',
   },
   buttonStyle: {
-    width: 300,
-    height: 66,
-    backgroundColor: '#34A853',
+    width: 350,
+    height: 65,
+    backgroundColor: '#7D5DF6',
     borderRadius: 12,
     alignItems: 'center',
     justifyContent: 'center',
