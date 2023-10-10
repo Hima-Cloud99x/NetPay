@@ -12,6 +12,7 @@ import Welcome from './screens/Onboarding/Welcome';
 import Login from './screens/Login/Login';
 import Signup from './screens/Login/Signup';
 import ForgotPassword from './screens/Login/ForgotPassword';
+import PhoneNo from './screens/Login/PhoneNo';
 
 const Stack = createStackNavigator();
 
@@ -47,6 +48,11 @@ const App = () => {
          <Stack.Screen
           name="ForgotPassword"
           component={ForgotPassword}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name="PhoneNo"
+          component={PhoneNo}
           options={{headerShown: false}}
         />
       </Stack.Navigator>
