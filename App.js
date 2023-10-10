@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 /* eslint-disable no-undef */
 import React from 'react';
 import 'react-native-gesture-handler';
@@ -10,6 +11,7 @@ import Onboarding from './screens/Onboarding/Onboarding';
 import Welcome from './screens/Onboarding/Welcome';
 import Login from './screens/Login/Login';
 import Signup from './screens/Login/Signup';
+import ForgotPassword from './screens/Login/ForgotPassword';
 
 const Stack = createStackNavigator();
 
@@ -40,6 +42,11 @@ const App = () => {
         <Stack.Screen
           name="Signup"
           component={Signup}
+          options={{headerShown: false}}
+        />
+         <Stack.Screen
+          name="ForgotPassword"
+          component={ForgotPassword}
           options={{headerShown: false}}
         />
       </Stack.Navigator>
