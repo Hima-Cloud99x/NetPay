@@ -41,13 +41,13 @@ const VerifyEmail = () => {
         <View style={styles.imageContainer}>
           <TouchableOpacity
             style={styles.backIcon}
-            onPress={() => navigation.navigate('ForgotPassword')}>
+            onPress={() => navigation.navigate('PhoneNo')}>
             <Image source={back} />
           </TouchableOpacity>
           <Image source={coffeeCircles} style={{marginTop: -20}} />
         </View>
         <View style={styles.inputContainer}>
-          <Text style={styles.textStyle1}>Verify Email</Text>
+          <Text style={styles.textStyle1}>Verify Code</Text>
           <Text style={styles.textStyle2}>Please enter the code we just sent to email</Text>
           <Text style={styles.textStyle4}>timsmxxx@gmail.com</Text>
           <Text style={styles.textStyle3}> Resend code in 00:48</Text>
@@ -91,8 +91,8 @@ const VerifyEmail = () => {
           <View style={{gap: 12}}>
             <TouchableOpacity
               style={styles.buttonStyle}
-              onPress={() => navigation.navigate('ResetPassword')}>
-              <Text style={styles.buttonText}>Verify</Text>
+              onPress={() => navigation.navigate('VerifyPhone')}>
+              <Text style={styles.buttonText}>Continue</Text>
             </TouchableOpacity>
             {/* <TouchableOpacity
               style={[styles.buttonStyle, {backgroundColor: '#23262F'}]}>
@@ -166,7 +166,8 @@ const styles = StyleSheet.create({
     fontFamily: 'Poppins-SemiBold',
     fontSize: 22,
     marginTop: 30,
-    right: '35%',
+    right: '36%',
+    bottom: '0.5%',
   },
   textStyle2: {
     color: '#ACADB9',
@@ -198,6 +199,7 @@ const styles = StyleSheet.create({
     borderRadius: 12,
     alignItems: 'center',
     justifyContent: 'center',
+    bottom: '90%',
   },
   buttonText: {
     fontFamily: 'Poppins-Medium',

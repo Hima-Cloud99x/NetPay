@@ -12,7 +12,7 @@ import {
 } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 
-const VerifyPhone = () => {
+const VerifyWallet = () => {
   const navigation = useNavigation();
 
   const back = require('../../assets/Back.png');
@@ -48,10 +48,9 @@ const VerifyPhone = () => {
           <Image source={coffeeCircles} style={{ marginTop: -20 }} />
         </View>
         <View style={styles.inputContainer}>
-          <Text style={styles.textStyle1}>Verify Code</Text>
-          <Text style={styles.textStyle2}>Please enter the code we just sent to phone number</Text>
-          <Text style={styles.textStyle4}>(+1) 234 567 XXX</Text>
-          <Text style={styles.textStyle3}> Resend code in 00:48</Text>
+          <Text style={styles.textStyle1}>Add 4-digits pin</Text>
+          <Text style={styles.textStyle2}>Add a pin number to make your wallet</Text>
+          <Text style={styles.textStyle4}>more secure</Text>
           <View>
             <View style={styles.inputFieldContainer}>
               <TextInput
@@ -87,8 +86,8 @@ const VerifyPhone = () => {
           <View style={{ gap: 12 }}>
             <TouchableOpacity
               style={styles.buttonStyle}
-              onPress={() => navigation.navigate('VerifyWallet')}>
-              <Text style={styles.buttonText}>Verify</Text>
+              onPress={() => navigation.navigate('VerifyCode')}>
+              <Text style={styles.buttonText}>Confirm your pin</Text>
             </TouchableOpacity>
           </View>
         </View>
@@ -115,7 +114,6 @@ const styles = StyleSheet.create({
   inputContainer: {
     marginLeft: '5%',
     marginRight: '5%',
-    // backgroundColor: '#141416',
     height: 502,
     borderRadius: 35,
     alignItems: 'center',
@@ -124,23 +122,10 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     gap: 18,
     marginBottom: 45,
-    bottom: '22%',
-  },
-  filledInput: {
-    width: 60,
-    height: 60,
-    borderWidth: 2,
-    borderColor: '#34A853',
-    borderRadius: 13,
-    fontFamily: 'Poppins-Light',
-    fontSize: 20,
-    textAlign: 'center',
-    color: '#fff',
   },
   inputField: {
     width: 60,
     height: 60,
-    // borderWidth: 0.5,
     borderColor: '#C2C3CB',
     borderRadius: 13,
     fontFamily: 'Poppins-Light',
@@ -155,7 +140,7 @@ const styles = StyleSheet.create({
     fontFamily: 'Poppins-SemiBold',
     fontSize: 22,
     marginTop: 30,
-    right: '35%',
+    right: '28%',
   },
   textStyle2: {
     color: '#ACADB9',
@@ -163,7 +148,7 @@ const styles = StyleSheet.create({
     fontSize: 14,
     marginBottom: 40,
     top: '0.5%',
-    right: '6.5%',
+    right: '17%',
   },
   textStyle4: {
     color: '#ACADB9',
@@ -171,14 +156,7 @@ const styles = StyleSheet.create({
     fontSize: 14,
     marginBottom: 40,
     bottom: '8%',
-    right: '35%',
-  },
-  textStyle3: {
-    color: '#ACADB9',
-    fontFamily: 'Poppins-SemiBold',
-    fontSize: 15,
-    marginBottom: 30,
-    top: '10%',
+    right: '38%',
   },
   buttonStyle: {
     width: 350,
@@ -187,7 +165,6 @@ const styles = StyleSheet.create({
     borderRadius: 12,
     alignItems: 'center',
     justifyContent: 'center',
-    bottom: '80%',
   },
   buttonText: {
     fontFamily: 'Poppins-Medium',
@@ -196,4 +173,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default VerifyPhone;
+export default VerifyWallet;

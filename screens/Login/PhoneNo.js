@@ -199,7 +199,7 @@ const PhoneNo = () => {
     <ScrollView contentContainerStyle={styles.window}>
       <TouchableOpacity
         style={styles.backIcon}
-        onPress={() => navigation.navigate('Welcome')}>
+        onPress={() => navigation.navigate('Login')}>
         <Image source={back} />
       </TouchableOpacity>
 
@@ -223,7 +223,7 @@ const PhoneNo = () => {
 
       <TouchableOpacity
         style={styles.buttonStyle}
-        onPress={() => navigation.navigate('Home')}>
+        onPress={() => navigation.navigate('VerifyCode')}>
         <Text style={styles.buttonText}>Continue</Text>
       </TouchableOpacity>
     </ScrollView>

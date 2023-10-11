@@ -14,6 +14,8 @@ import Signup from './screens/Login/Signup';
 import ForgotPassword from './screens/Login/ForgotPassword';
 import PhoneNo from './screens/Login/PhoneNo';
 import VerifyCode from './screens/Login/VerifyCode';
+import VerifyPhone from './screens/Login/VerifyPhone';
+import VerifyWallet from './screens/Login/VerifyWallet';
 
 const Stack = createStackNavigator();
 
@@ -59,6 +61,16 @@ const App = () => {
          <Stack.Screen
           name="VerifyCode"
           component={VerifyCode}
+          options={{headerShown: false}}
+        />
+          <Stack.Screen
+          name="VerifyPhone"
+          component={VerifyPhone}
+          options={{headerShown: false}}
+        />
+          <Stack.Screen
+          name="VerifyWallet"
+          component={VerifyWallet}
           options={{headerShown: false}}
         />
       </Stack.Navigator>
