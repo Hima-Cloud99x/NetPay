@@ -147,8 +147,8 @@ const Signup = () => {
       {/* Login button */}
       <TouchableOpacity
         style={styles.buttonStyle}
-        onPress={() => navigation.navigate('Home')}>
-        <Text style={styles.buttonText}>Sign up</Text>
+        onPress={() => navigation.navigate('PassChanged')}>
+        <Text style={styles.buttonText}>Continue</Text>
       </TouchableOpacity>
 
       {/* <TouchableOpacity
@@ -234,7 +234,8 @@ const styles = StyleSheet.create({
     borderRadius: 12,
     alignItems: 'center',
     justifyContent: 'center',
-    marginBottom: 20,
+    // marginBottom: 20,
+    top: '23%',
   },
   buttonStyle1: {
     height: 65,

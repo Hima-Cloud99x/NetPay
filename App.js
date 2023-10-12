@@ -1,3 +1,4 @@
+/* eslint-disable no-trailing-spaces */
 /* eslint-disable prettier/prettier */
 /* eslint-disable no-undef */
 import React from 'react';
@@ -23,6 +24,10 @@ import ForgotWEmail from './screens/ForgotPass/ForgotWEmail';
 import ForgotWphone from './screens/ForgotPass/ForgotWphone';
 import VerifyPass from './screens/ForgotPass/VerifyPass';
 import NewPass from './screens/ForgotPass/NewPass';
+import PassChanged from './screens/ForgotPass/PassChanged';
+import Home from './screens/Home/Home';
+
+
 
 const Stack = createStackNavigator();
 
@@ -114,6 +119,16 @@ const App = () => {
           name="NewPass"
           component={NewPass}
           options={{headerShown: false}}
+        />
+           <Stack.Screen
+          name="PassChanged"
+          component={PassChanged}
+          options={{headerShown: false}}
+        /> 
+        <Stack.Screen
+        name="Home"
+        component={Home}
+        options={{headerShown: false}}
         />
       </Stack.Navigator>
     </NavigationContainer>
