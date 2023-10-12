@@ -18,6 +18,7 @@ import VerifyPhone from './screens/Login/VerifyPhone';
 import VerifyWallet from './screens/Login/VerifyWallet';
 import FaceID from './screens/Login/FaceID';
 import FaceVerify from './screens/Login/FaceVerify';
+import Sucess from './screens/Login/Sucess';
 
 const Stack = createStackNavigator();
 
@@ -83,6 +84,11 @@ const App = () => {
         <Stack.Screen
           name="FaceVerify"
           component={FaceVerify}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name="Sucess"
+          component={Sucess}
           options={{headerShown: false}}
         />
       </Stack.Navigator>

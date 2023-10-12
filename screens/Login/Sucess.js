@@ -7,26 +7,24 @@ import React from 'react';
 import { View, StyleSheet, Text, Image, TouchableOpacity, ScrollView, TextInput } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 
-const FaceID = () => {
+const Sucess = () => {
   const navigation = useNavigation();
 
-  const back = require('../../assets/Back.png');
-  const yourImage = require('../../assets/Face.png');
+
+  const yourImage = require('../../assets/Check.png');
 
   return (
     <View style={styles.window}>
       <ScrollView contentContainerStyle={styles.scrollContent}>
-        <TouchableOpacity style={styles.backIcon} onPress={() => navigation.goBack()}>
-          <Image source={back} />
-          <Text style={styles.title}>Face ID Verification</Text>
-          <Text style={styles.description}>Unlock Paypay with your face ID quick and</Text>
-          <Text style ={styles.description1}>secured</Text>
-        </TouchableOpacity>
+       
+          <Text style={styles.title}>Account Verified!</Text>
+          <Text style={styles.description}>Your account has been verified</Text>
+          <Text style ={styles.description1}>successfully, now let's enjoy NetPay features!</Text>
         <View style={styles.centeredContent}>
            <Image source={yourImage} style={styles.image} />  
         </View>
         <TouchableOpacity style={styles.buttonStyle} onPress={() => navigation.navigate('FaceVerify')}>
-          <Text style={styles.buttonText}>Scan my face</Text>
+          <Text style={styles.buttonText}>Continue</Text>
         </TouchableOpacity>
       </ScrollView>
     </View>
@@ -52,30 +50,32 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   image: {
-    width: 300,
-    height: 300,
+    width: 280,
+    height: 180,
     marginTop: 20,
-    top: '2%',
+    bottom: '90%',
+    right:'6%',
   },
   title: {
     color: '#fff',
     fontFamily: 'Poppins-SemiBold',
     fontSize: 25,
     marginTop: 20,
+    top: '28%',
   },
   description: {
     color: '#ACADB9',
     fontFamily: 'Poppins-Regular',
     fontSize: 14,
     marginVertical: 20,
-    bottom: '6%',
+    top: '28%',
   },
   description1:{
     color: '#ACADB9',
     fontFamily: 'Poppins-Regular',
     fontSize: 14,
     marginVertical: 20,
-    bottom: '24%',
+    top: '24%',
   },
   buttonStyle: {
     width: 350,
@@ -85,7 +85,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     marginVertical: 20,
-    top: '22%',
+    top: '20%',
   },
   buttonText: {
     fontFamily: 'Poppins-Medium',
@@ -94,4 +94,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default FaceID;
+export default Sucess;
