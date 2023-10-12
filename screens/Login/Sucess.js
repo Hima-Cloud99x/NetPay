@@ -23,7 +23,7 @@ const Sucess = () => {
         <View style={styles.centeredContent}>
            <Image source={yourImage} style={styles.image} />  
         </View>
-        <TouchableOpacity style={styles.buttonStyle} onPress={() => navigation.navigate('FaceVerify')}>
+        <TouchableOpacity style={styles.buttonStyle} onPress={() => navigation.navigate('ForgotWEmail')}>
           <Text style={styles.buttonText}>Continue</Text>
         </TouchableOpacity>
       </ScrollView>

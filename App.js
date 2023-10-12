@@ -19,6 +19,10 @@ import VerifyWallet from './screens/Login/VerifyWallet';
 import FaceID from './screens/Login/FaceID';
 import FaceVerify from './screens/Login/FaceVerify';
 import Sucess from './screens/Login/Sucess';
+import ForgotWEmail from './screens/ForgotPass/ForgotWEmail';
+import ForgotWphone from './screens/ForgotPass/ForgotWphone';
+import VerifyPass from './screens/ForgotPass/VerifyPass';
+import NewPass from './screens/ForgotPass/NewPass';
 
 const Stack = createStackNavigator();
 
@@ -89,6 +93,26 @@ const App = () => {
         <Stack.Screen
           name="Sucess"
           component={Sucess}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name="ForgotWEmail"
+          component={ForgotWEmail}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name="ForgotWphone"
+          component={ForgotWphone}
+          options={{headerShown: false}}
+        />
+         <Stack.Screen
+          name="VerifyPass"
+          component={VerifyPass}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name="NewPass"
+          component={NewPass}
           options={{headerShown: false}}
         />
       </Stack.Navigator>

@@ -1,6 +1,6 @@
 /* eslint-disable prettier/prettier */
 
-import {View, StyleSheet, Text, Image, TouchableOpacity} from 'react-native';
+import {View, StyleSheet, Text, Image, TouchableOpacity, StatusBar} from 'react-native';
 import {useNavigation} from '@react-navigation/native';
 import React from 'react';
 
@@ -11,6 +11,7 @@ const Welcome = () => {
   const image = require('../../assets/Steps.png');
   const ima = require('../../assets/Info.png');
   const ima1 = require('../../assets/logoa.png');
+  StatusBar.setBackgroundColor('#111827');
 
   return (
     <View style={styles.container}>

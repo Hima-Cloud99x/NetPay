@@ -1,6 +1,6 @@
 /* eslint-disable prettier/prettier */
 import React, { useEffect } from 'react';
-import { View, StyleSheet, Image } from 'react-native';
+import { View, StyleSheet, Image, StatusBar } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import LinearGradient from 'react-native-linear-gradient';
@@ -10,6 +10,7 @@ import 'react-native-gesture-handler';
 
 const SplashScreen = () => {
   const navigation = useNavigation();
+  StatusBar.setBackgroundColor('#111827');
 
   // Simulate some initialization or data loading process
   useEffect(() => {

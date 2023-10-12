@@ -27,7 +27,7 @@ const ForgotWEmail = () => {
   const navigation = useNavigation();
 
   const back = require('../../assets/Back.png');
-  const phoneIcon = require('../../assets/sms.png'); // Assuming you have a phone icon image
+  const phoneIcon = require('../../assets/phoneicon.png'); // Assuming you have a phone icon image
 
   const [phoneNumber, setPhoneNumber] = useState('');
 
@@ -46,25 +46,25 @@ const ForgotWEmail = () => {
       <View style={styles.imageContainer}></View>
 
       <Text style={styles.textStyle1}>Reset Password</Text>
-      <Text style={styles.textStyle2}>Enter your email, we will send a </Text>
+      <Text style={styles.textStyle2}>Enter your phone number, we will send a </Text>
         <Text style={styles.textStyle3}>verification code</Text>
-      <Text style={styles.textLabel}>Email</Text>
+      <Text style={styles.textLabel}>Phone Number</Text>
       <View style={styles.inputFieldContainer}>
         <Image source={phoneIcon} />
         <TextInput
           style={styles.inputField}
           value={phoneNumber}
           onChangeText={handlePhoneNumberChange}
-          placeholder="alexscth@email.com"
+          placeholder="(+1) 234 567 890"
           placeholderTextColor="#C2C3CB"
-         // keyboardType="phone-pad"
+          keyboardType="phone-pad"
         />
       </View>
 
       <TouchableOpacity
         style={styles.buttonStyle}
-        onPress={() => navigation.navigate('ForgotWphone')}>
-        <Text style={styles.buttonText}>Continue</Text>
+        onPress={() => navigation.navigate('VerifyPass')}>
+        <Text style={styles.buttonText}>Send Link</Text>
       </TouchableOpacity>
     </ScrollView>
   );

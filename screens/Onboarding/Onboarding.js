@@ -24,6 +24,7 @@ import {
   Image,
   Animated,
   TouchableOpacity,
+  StatusBar,
 } from 'react-native';
 
 // Import navigation hook for screen navigation
@@ -31,6 +32,8 @@ import { useNavigation } from '@react-navigation/native';
 
 // Import your logo image
 import LogoImage from '../../assets/logoa.png';
+
+StatusBar.setBackgroundColor('#111827');
 
 // Data for onboarding screens
 const details = [
