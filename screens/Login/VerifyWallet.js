@@ -86,7 +86,7 @@ const VerifyWallet = () => {
           <View style={{ gap: 12 }}>
             <TouchableOpacity
               style={styles.buttonStyle}
-              onPress={() => navigation.navigate('VerifyCode')}>
+              onPress={() => navigation.navigate('FaceID')}>
               <Text style={styles.buttonText}>Confirm your pin</Text>
             </TouchableOpacity>
           </View>
@@ -105,7 +105,7 @@ const styles = StyleSheet.create({
     width: 45,
     height: 45,
     marginTop: '7%',
-    left: 5,
+    left: 8,
   },
   imageContainer: {
     flexDirection: 'row',
@@ -134,6 +134,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     includeFontPadding: false,
     backgroundColor: '#23262F',
+    bottom: '10%',
   },
   textStyle1: {
     color: '#fff',
@@ -141,13 +142,14 @@ const styles = StyleSheet.create({
     fontSize: 22,
     marginTop: 30,
     right: '28%',
+    bottom: '3%',
   },
   textStyle2: {
     color: '#ACADB9',
     fontFamily: 'Poppins-Regular',
     fontSize: 14,
     marginBottom: 40,
-    top: '0.5%',
+    bottom: '2%',
     right: '17%',
   },
   textStyle4: {
@@ -155,7 +157,7 @@ const styles = StyleSheet.create({
     fontFamily: 'Poppins-Regular',
     fontSize: 14,
     marginBottom: 40,
-    bottom: '8%',
+    bottom: '9%',
     right: '38%',
   },
   buttonStyle: {

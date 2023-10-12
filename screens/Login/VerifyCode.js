@@ -199,7 +199,7 @@ const styles = StyleSheet.create({
     borderRadius: 12,
     alignItems: 'center',
     justifyContent: 'center',
-    bottom: '90%',
+    bottom: '70%',
   },
   buttonText: {
     fontFamily: 'Poppins-Medium',
