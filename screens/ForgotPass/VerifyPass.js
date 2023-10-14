@@ -91,7 +91,7 @@ const VerifyEmail = () => {
           <View style={{gap: 12}}>
             <TouchableOpacity
               style={styles.buttonStyle}
-              onPress={() => navigation.navigate('NewPass')}>
+              onPress={() => navigation.navigate('Home')}>
               <Text style={styles.buttonText}>Continue</Text>
             </TouchableOpacity>
             {/* <TouchableOpacity
