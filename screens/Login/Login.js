@@ -193,7 +193,7 @@ const styles = StyleSheet.create({
   textStyle1: {
     color: '#fff',
     fontFamily: 'Poppins-SemiBold',
-    fontSize: 30,
+    fontSize: 24,
     bottom: '15%',
   },
   textStyle2: {

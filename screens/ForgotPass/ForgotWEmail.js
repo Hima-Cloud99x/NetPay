@@ -113,20 +113,20 @@ const styles = StyleSheet.create({
   },
   textStyle1: {
     color: '#fff',
-    fontFamily: 'Poppins-SemiBold',
+    fontFamily: 'Inter-Regular',
     fontSize: 30,
     bottom: '30%',
   },
   textStyle2: {
     color: '#fff',
-    fontFamily: 'Poppins-SemiBold',
+    fontFamily: 'Inter-SemiBold',
     fontSize: 14,
     marginTop: -17,
     bottom: '27%',
   },
   textStyle3: {
     color: '#fff',
-    fontFamily: 'Poppins-SemiBold',
+    fontFamily: 'Inter-SemiBold',
     fontSize: 14,
     marginTop: -17,
     bottom: '24%',

@@ -51,7 +51,7 @@ const styles = StyleSheet.create({
   textStyle: {
     color: '#fff',
     fontFamily: 'Poppins-SemiBold',
-    fontSize: 33,
+    fontSize: 20,
     textAlign: 'center',
     width: 380,
     bottom: '55%',
@@ -60,7 +60,7 @@ const styles = StyleSheet.create({
   textStyle1: {
     color: '#ACADB9',
     fontFamily: 'Poppins-Regular',
-    fontSize: 15,
+    fontSize: 16,
     textAlign: 'center',
     width: 300,
     marginBottom: '5%',

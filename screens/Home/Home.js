@@ -486,7 +486,7 @@ const Home = () => {
       <Text style={styles.title1}>Good morning,</Text>
       <Text style={styles.title}>Alex Scotch</Text>
       <View style={styles.header}>
-      <TouchableOpacity onPress={() => handleNavigation('Sucess')}>
+      <TouchableOpacity onPress={() => handleNavigation('Notification')}>
         <Image
             source={require('../../assets/noti.png')}
             style={[styles.icon, { marginRight: 10 }]}
