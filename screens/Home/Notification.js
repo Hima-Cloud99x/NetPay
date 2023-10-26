@@ -17,7 +17,7 @@ const FaceID = () => {
   return (
     <View style={styles.window}>
       <ScrollView contentContainerStyle={styles.scrollContent}>
-        <TouchableOpacity style={styles.backIcon} onPress={() => navigation.goBack()}>
+        <TouchableOpacity style={styles.backIcon} onPress={() => navigation.goBack('Home')}>
           <Image source={back} />
           <Text style={styles.title}>Notification</Text>
           {/* <Text style={styles.description}>Unlock Paypay with your face ID quick and</Text> */}

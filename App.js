@@ -27,6 +27,7 @@ import NewPass from './screens/ForgotPass/NewPass';
 import PassChanged from './screens/ForgotPass/PassChanged';
 import Home from './screens/Home/Home';
 import Notification from './screens/Home/Notification';
+import History from './screens/Home/History';
 
 
 
@@ -134,6 +135,11 @@ const App = () => {
          <Stack.Screen
         name="Notification"
         component={Notification}
+        options={{headerShown: false}}
+        />
+          <Stack.Screen
+        name="History"
+        component={History}
         options={{headerShown: false}}
         />
       </Stack.Navigator>
